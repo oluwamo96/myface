@@ -1,0 +1,199 @@
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  background: #f0f2f5;
+}
+
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Desktop Facebook text logo */
+.desktop-logo {
+  font-size: 48px;
+  color: #1877f2;
+  font-weight: bold;
+  margin-bottom: 20px;
+  user-select: none;
+}
+
+/* Mobile Facebook logo */
+.mobile-logo {
+  display: none;
+  width: 96px;
+  height: 96px;
+  margin-bottom: 20px;
+}
+
+/* Login card */
+.login-card {
+  background-color: white;
+  width: 396px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.login-card input {
+  width: 364px;
+  padding: 14px 16px;
+  font-size: 17px;
+  margin-bottom: 12px;
+  border: 1px solid #dddfe2;
+  border-radius: 6px;
+}
+
+.login-card button {
+  width: 364px;
+  background-color: #1877f2;
+  color: white;
+  padding: 14px 0;
+  font-size: 17px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.forgot-link {
+  display: block;
+  margin: 15px 0 10px;
+  font-size: 14px;
+  color: black;
+  text-decoration: none;
+}
+
+.divider {
+  margin: 15px 0;
+  border: none;
+  border-top: 1px solid #dadde1;
+}
+
+/* Default for all screens (desktop default) */
+.create-button {
+  display: inline-block;
+  background-color: transparent;
+  margin-top: 0; /* desktop: no extra space */
+  color: #1877f2;
+  padding: 14px 0;
+  font-size: 17px;
+  width: 60%;
+  border-radius: 6px;
+  border: 2px solid #a3c1f7;
+  text-decoration: none;
+  font-weight: bold;
+  box-sizing: border-box;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Mobile only: override margin-top */
+@media (max-width: 480px) {
+  .create-button {
+    margin-top: 135px; /* mobile only */
+  }
+}
+
+
+
+/* Meta logo (shown only on mobile) */
+.meta-logo {
+  display: none;
+  width: 80px;
+  height: 12px;
+  opacity: 0.6;
+  margin: 15px auto 0;
+}
+
+/* Footer */
+.footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 12px;
+  color: #737373;
+  max-width: 900px;
+  padding: 20px;
+}
+
+.languages,
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #737373;
+}
+
+.meta-copy {
+  margin-top: 10px;
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+  body {
+    background-color: white;
+  }
+
+  .desktop-logo {
+    display: none;
+  }
+
+  .mobile-logo {
+    display: block;
+  }
+
+  .login-card {
+    width: 100%;
+    max-width: 400px;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 20px 15px;
+  }
+
+  .login-card input,
+  .login-card button,
+  .create-button {
+    width: 100%;
+  }
+
+  /* Fully rounded buttons on mobile */
+  .login-card button,
+  .create-button {
+    border-radius: 9999px;
+  }
+
+  .meta-logo {
+    display: block;
+  }
+
+  .footer {
+    display: none;
+  }
+
+  /* Mobile-only footer links below Meta logo */
+  .mobile-footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 16px;
+    font-size: 10px; /* tiny font */
+    color: #444444; /* dark grey */
+  }
+
+  .mobile-footer-links a {
+    color: #444444;
+    text-decoration: none;
+  }
+
+  .mobile-footer-links a:hover {
+    text-decoration: underline;
+  }
+}
